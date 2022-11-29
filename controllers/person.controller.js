@@ -22,8 +22,8 @@ class PersonController {
 
 	async createPerson(req, res) {
 		try {
-			const data = req.body;
-			await Person.create(data);
+			const query = req.query;
+			const data = await Person.create(query);
 			res.json({
 				status: "Successfully created",
 				data,

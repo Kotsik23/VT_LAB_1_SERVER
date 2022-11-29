@@ -13,21 +13,11 @@ const Person = sequelize.define(
 		phoneNumber: {
 			type: DataTypes.STRING,
 			allowNull: false,
-			validate: {
-				validator: (v) => {
-					return phoneValidationRegex.test(v);
-				},
-			},
 		},
 		gender: DataTypes.STRING,
 		email: {
 			type: DataTypes.STRING,
 			allowNull: false,
-			validate: {
-				validator: (v) => {
-					return emailValidationRegex.test(v);
-				},
-			},
 		},
 		comment: DataTypes.STRING,
 	},
